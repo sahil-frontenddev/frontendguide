@@ -1651,3 +1651,9 @@ span{
         margin-top: 20px;
     }
 }
+
+.hide-me {display: none;}
+
+.stop-overflow {
+    overflow: hidden;
+}
