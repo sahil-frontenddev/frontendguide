@@ -8,5 +8,20 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  plugins: [],
+  plugins: ["gatsby-plugin-decap-cms",{
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      "name": "images",
+      "path": "./src/images/"
+    },
+    __key: "images"
+  }, {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      "name": "pages",
+      "path": "./src/_posts/blog"
+    },
+    __key: "pages"
+  },
+  'gatsby-transformer-remark']
 }
