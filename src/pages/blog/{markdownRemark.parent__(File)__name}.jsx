@@ -5,13 +5,13 @@ import Layout from "../../components/Layout"
 // import NavbarArch from "components/Navbar-arch/navbar-arch"
 // import FooterArch from "components/Footer-arch/footer-arch";
 
-export default function BlogPostTemplate({data}) {
+export default function BlogPostTemplate() {
   
   return (
     <Layout>
       
       <section class="page-header undefined">
-        <div class="container">
+        {/* <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-7 col-md-9">
               <div class="cont text-center">
@@ -40,7 +40,7 @@ export default function BlogPostTemplate({data}) {
       </div>
       </div>
       </div>
-      
+       */}
       </section>
       
     </Layout>
@@ -48,26 +48,26 @@ export default function BlogPostTemplate({data}) {
   )
 }
 
-export const Head = ({data}) => {
+export const Head = () => {
   return (
     <>
-      <title>Dk Tour & Travel - Blog detail | {data.markdownRemark.frontmatter.title}</title>
-      <link rel="stylesheet" href="/css/arch-skin-dark.css" />
+      <title>FrontendGuide | Blog list </title>
+      {/* <link rel="stylesheet" href="/css/arch-skin-dark.css" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" />
-      <link rel="stylesheet" href="/css/customcss.css" />
+      <link rel="stylesheet" href="/css/customcss.css" /> */}
     </>
   )
 }
-export const pageQuery = graphql`
-  query MyQuery($id: String) {
-  markdownRemark(id: {eq: $id}) {
-    frontmatter {
-      date
-      thumbnail
-      title
-    }
-    html
-  }
-}
-`
+// export const pageQuery = graphql`
+//   query MyQuery($id: String) {
+//   markdownRemark(id: {eq: $id}) {
+//     frontmatter {
+//       date
+//       thumbnail
+//       title
+//     }
+//     html
+//   }
+// }
+// `
