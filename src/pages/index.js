@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 
 export default function Home() {
 
-  return <Layout>
+  return <Layout homePage={true}>
   
 <section id="banner-img" className="banner-img bg-banner-img">
   <div className="row no-gutters">

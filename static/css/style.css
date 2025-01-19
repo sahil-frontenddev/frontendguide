@@ -175,10 +175,10 @@ a:hover{
 /**************NAVBAR**********/
 
 .width-logo img{
-    width: 11%;
+    width: 25%;
 }
 .width-logo1 img{
-    width: 50%;
+    width: 72%;
 }
 .logo-img{
     margin-top: 30px;
@@ -991,7 +991,7 @@ span{
 
 /***************TOP STORIES PAGE START****************/
 .bg-top-stories-img{
-    background-image: url("../img/top-stories/blog-detail-header.jpg");
+    background-image: url("../img/top-stories/blog-detail-header.png");
     height: 350px;
     background-attachment: fixed;
     background-position: center;

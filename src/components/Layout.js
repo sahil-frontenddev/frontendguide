@@ -2,14 +2,13 @@ import React,{useState,useEffect} from 'react'
 import Header from './Header';
 import Footer from './Footer';
 
-export default function Layout({children}) {
+export default function Layout({children,homePage}) {
     const [isLoading,setIsLoading] = useState(true);
-
+    console.log(homePage);
   useEffect(()=>{
     setTimeout(() => {
       setIsLoading(false);
     }, 1500);
-    console.log('loading');
   },[])
   return (
     <>
@@ -20,7 +19,7 @@ export default function Layout({children}) {
             <div className='three'></div>
         </div>
     </div>
-    <Header />
+    <Header homePage={homePage}/>
     {children}
     <Footer />
 </>

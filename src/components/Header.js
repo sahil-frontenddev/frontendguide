@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function Header() {
+export default function Header({homePage}) {
 
     const [menuOpen,setMenuOpen] = useState(false);
     const menuRef = React.useRef(null);
@@ -9,7 +9,6 @@ export default function Header() {
         const menu = menuRef.current;
         if (!menuOpen) {
             document.getElementsByTagName('body')[0].classList.add('stop-overflow');
-            console.log(window,document.getElementsByTagName('body')[0].classList);
             menu.classList.remove('end-anm1');
             menu.classList.add('inner-wrapper');
             menu.classList.add('start-anm1');
@@ -25,19 +24,47 @@ export default function Header() {
     }
   return (
     <header>
+        {homePage? (<nav id="my-nav" className="navbar navbar-expand-lg navbar-light rounded-bar sidemenu-nav ">
 
-    <nav id="my-nav" className="navbar navbar-expand-lg navbar-light rounded-bar sidemenu-nav">
+<div className="logo width-logo1">
+    <a href="index-blog.html"><img src="img/logo-white.png" alt="Logo Img" /></a>
+</div>
+<div className="menu-btn ml-auto" onClick={()=>{setMenuOpen(true);animationHandler()}}>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
-        <div className="logo width-logo1">
-            <a href="index-blog.html"><img src="blog/img/logo-white.png" alt="Logo Img" /></a>
+</nav>): (
+            <nav id="my-nav" className="navbar navbar-expand-lg navbar-light rounded-bar fixed-navbar fixed-menu1">
+            <div className="row w-100 m-0">
+            <div className="col-3 p-0 mt-3 mt-md-4">
+            <ul className="navbar-icons">
+                <li className="navbar_list"><i className="lab la-facebook-f"></i></li>
+                <li className="navbar_list"><i className="fab fa-x-twitter"></i></li>
+                <li className="navbar_list"><i className="lab la-linkedin-in"></i></li>
+            </ul>
         </div>
-        <div className="menu-btn ml-auto" onClick={()=>{setMenuOpen(true);animationHandler()}}>
-            <span></span>
-            <span></span>
-            <span></span>
+
+        <div className="col-6">
+            <div className="logo ml-auto mr-auto width-logo text-center mt-2 mt-md-3">
+                <a href="../index-blog.html"><img src="/img/logo.png" alt="Logo Img" /></a>
+            </div>
         </div>
 
-    </nav>
+        <div className="col-3 p-0 text-right">
+            <div className="menu-btn mt-3 mt-md-4" onClick={()=>{setMenuOpen(true);animationHandler()}}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+</nav>
+)}
+
+    
 
     <div className="outer-wrapper" ref={menuRef}>
 
