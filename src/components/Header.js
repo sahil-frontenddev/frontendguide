@@ -78,7 +78,7 @@ export default function Header({homePage}) {
 
                     <div className="col-12">
                         <div className="logo-img text-center">
-                            <a href="index-blog.html"><img src="blog/img/logo.png" alt="Logo Img" /></a>
+                            <a href="index-blog.html"><img src="/img/logo.png" alt="Logo Img" /></a>
                         </div>
 
                         <ul className="navbar-nav mt-5 text-center small-nav">
